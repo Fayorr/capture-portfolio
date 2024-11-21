@@ -24,5 +24,8 @@ export const Image = styled.div`
     }
 `;
 export const Hide = styled.div`
-  overflow: hidden;  
+  overflow: hidden; 
+  h2{
+    font-weight: 400;
+  } 
 `;
