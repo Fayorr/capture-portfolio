@@ -21,7 +21,7 @@ const StyledNav = styled.nav`
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 10rem;
+    padding: 1rem 7rem;
     background-color: #282828;
     ul{
         display: flex;
