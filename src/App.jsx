@@ -4,7 +4,6 @@ import ContactUs from './pages/ContactUs'
 import OurWork from './pages/OurWork'
 import GlobalStyle from './components/GlobalStyle'
 import Nav from './components/Nav'
-import ContactUs from './pages/ContactUs'
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -15,12 +14,13 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path='/' element={<AboutUs />} />
+        <Route path='/about' element={<AboutUs />} />
         <Route path='/ourwork' element={<OurWork />} />
         <Route path='/contact' element={<ContactUs />} />
 
 
       </Routes>
-      <AboutUs />
+      
     </>
   )
 }

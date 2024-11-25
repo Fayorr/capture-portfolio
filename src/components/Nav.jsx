@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom'
 const Nav = () => {
   return (
     <StyledNav>
-        <h1><NavLink href="#" id="logo">Capture</NavLink></h1>
+        <h1><NavLink to="/" id="logo">Capture</NavLink></h1>
         <ul>
-            <li><NavLink href="#">1. About Us</NavLink></li>
-            <li><NavLink href="#">2. Our Work</NavLink></li>
-            <li><NavLink href="#">3. Contact Us</NavLink></li>
+            <li><NavLink to="/about">1. About Us</NavLink></li>
+            <li><NavLink to="/ourwork">2. Our Work</NavLink></li>
+            <li><NavLink to="/contact">3. Contact Us</NavLink></li>
         </ul>
     </StyledNav>
   )
