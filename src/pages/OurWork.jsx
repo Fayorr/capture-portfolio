@@ -35,6 +35,7 @@ const OurWork = () => {
 
 const Work = styled.div`
     min-height: 100vh;
+    
     overflow: hidden;
     padding: 5rem 7rem;
     background-color: white;
