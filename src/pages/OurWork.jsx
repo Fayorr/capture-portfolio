@@ -11,13 +11,15 @@ const OurWork = () => {
         <Movie>
             <h2>The Athlete</h2>
             <div className="line"></div>
-            <Link to="/">
+            <Link to=":id">
                 <img src={athlete} alt="athlete"  />
             </Link>
         </Movie>
         <Movie>
             <h2>The Racer</h2>
             <div className="line"></div>
+
+
             <Link to="/">
                 <img src={theracer} alt="the racer"  />
             </Link>
@@ -37,7 +39,6 @@ const Work = styled.div`
     min-height: 100vh;
     overflow: hidden;
     padding: 5rem 7rem;
-    background-color: white;
     h2{
         padding: 1rem 0rem;
     }
