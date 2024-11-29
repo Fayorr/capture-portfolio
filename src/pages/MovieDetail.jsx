@@ -14,6 +14,7 @@ const MovieDetail = () => {
     const currentMovie = movies.find((stateMovie) => stateMovie.url === fullUrl);
     setMovie(currentMovie);
   }, [movies, fullUrl]);
+  
 
   // Debug logging
   console.log('Route ID:', id);
