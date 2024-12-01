@@ -4,10 +4,7 @@ import { useParams } from 'react-router-dom'; // Change from useLocation to useP
 import { MovieState } from '../constant/movieState';
 
 const MovieDetail = () => {
-	// const fullUrl = `/work/${id}`; // Reconstruct the full URL
-	// const [movies] = useState(MovieState()); // Call the function to get the array
 	const { id } = useParams(); // Extract the dynamic ID from the route
-
 	const [movie, setMovie] = useState(null);
 
 	useEffect(() => {
@@ -17,10 +14,9 @@ const MovieDetail = () => {
 	}, [id]);
 
 	// Debug logging
-	console.log('Route ID:', id);
-	// console.log('Full URL:', fullUrl);
-	console.log('Movies:', MovieState);
-	console.log('Found Movie:', movie);
+	// console.log('Route ID:', id);
+	// console.log('Movies:', MovieState);
+	// console.log('Found Movie:', movie);
 
 	if (!movie) {
 		return <div>Loading or No Movie Found</div>;
@@ -34,7 +30,7 @@ const MovieDetail = () => {
 			</Headline>
 			<Awards>
 				{movie.awards.map((award) => (
-					<Award key={award.title} title={award?.title} description={award?.description} />
+					<Award key={award.title} title={award.title} description={award.description} />
 				))}
 			</Awards>
 			{movie.secondaryImg && (
