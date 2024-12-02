@@ -37,6 +37,7 @@ const MovieDetail = () => {
 				<SecondaryImage>
 					<img src={movie.secondaryImg} alt={`${movie.title} secondary`} />
 				</SecondaryImage>
+				
 			)}
 		</Details>
 	);
