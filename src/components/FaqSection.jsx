@@ -55,17 +55,17 @@ const FaqSection = () => {
     .faq-line{
         background: #cccccc;
         height: 0.2rem;
-        margin: 2rem 0rem;
+     
         width: 100%;
     }
     .question{
-        padding: 3rem 0rem;
+        padding: 1rem 0rem;
         cursor: pointer;
     }
     .answer{
-        padding: 2rem 0rem;
+        padding: 1rem 0rem;
     p{
-        padding: 1rem 0;
+        padding: 0.9rem 0;
     }
     }
  `;

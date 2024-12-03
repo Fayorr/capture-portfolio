@@ -77,7 +77,7 @@ const Awards = styled.div`
 const SecondaryImage = styled.div`
 	img {
 		width: 100%;
-		height: 50vh;
+		height: 60vh;
 		object-fit: cover;
 	}
 `;
