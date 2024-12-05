@@ -6,6 +6,7 @@ export const Layout = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 5rem 7rem;
+    
     color: white;
 `;
 export const Description = styled.div`
