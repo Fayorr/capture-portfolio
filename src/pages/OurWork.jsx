@@ -1,28 +1,29 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-// import athlete from '../img/athlete-small.png';
-// import theracer from '../img/theracer-small.png';
-// import goodtimes from '../img/goodtimes-small.png';
 import { MovieState } from '../constant/movieState';
+import { motion } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
+import { pageAnimation } from '../constant/animation';
 
 const OurWork = () => {
 	return (
-		<Work>
-			{MovieState.map((movie, index) => (
-				<Movie key={index}>
-					<h2>{movie.title}</h2>
-					<div className="line"></div>
-					<Link to={`/work/${movie.id}`}>
-						<img src={movie.mainImg} alt="athlete" />
-					</Link>
-				</Movie>
-			))}
-			
+		<Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+			<AnimatePresence>
+				{MovieState.map((movie, index) => (
+					<Movie key={index} variants={pageAnimation}>
+						<h2>{movie.title}</h2>
+						<div className="line"></div>
+						<Link to={`/work/${movie.id}`}>
+							<img src={movie.mainImg} alt="athlete" />
+						</Link>
+					</Movie>
+				))}
+			</AnimatePresence>
 		</Work>
 	);
 };
 
-const Work = styled.div`
+const Work = styled(motion.div)`
 	min-height: 100vh;
 	overflow: hidden;
 	padding: 5rem 7rem;

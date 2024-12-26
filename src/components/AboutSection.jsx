@@ -2,7 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import {Layout, Description, Image, Hide} from '../styles.jsx'
 import home1 from "../img/home1.png"
+import Wave from './Wave.jsx'
 import { motion } from "framer-motion"
+import { titleAnim, fade, photoAnim } from "../constant/animation.js"
+
 
 const AboutSection = () => {
   return (
@@ -10,22 +13,23 @@ const AboutSection = () => {
         <Description>
             <div className="title">
                 <Hide>
-                    <motion.h2>We work to make</motion.h2>
+                    <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                 </Hide>
                 <Hide>
-                    <h2>your <span>dreams</span> come
-                </h2>
+                    <motion.h2 variants={titleAnim}>your <span>dreams</span> come
+                </motion.h2>
                 </Hide>
                 <Hide>
-                    <h2>true.</h2>
+                    <motion.h2 variants={titleAnim}>true.</motion.h2>
                 </Hide>
-                <p>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills</p>
-                <button>Contact Us</button>
+                <motion.p variants={fade}>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills</motion.p>
+                <motion.button variants={fade}>Contact Us</motion.button>
             </div> 
         </Description>
         <Image>
-            <img src={home1} alt="hero-image" />
+            <motion.img variants={photoAnim} src={home1} alt="hero-image" />
         </Image>
+        <Wave />
    </Layout>
   )
 };
