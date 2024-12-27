@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MovieState } from '../constant/movieState';
 import { motion } from "framer-motion"
 import { AnimatePresence } from "framer-motion"
-import { pageAnimation, fade, photoAnim } from '../constant/animation';
+import { pageAnimation, fade, photoAnim, lineAnim } from '../constant/animation';
 
 const OurWork = () => {
 	return (
@@ -12,7 +12,7 @@ const OurWork = () => {
 				{MovieState.map((movie, index) => (
 					<Movie key={index} variants={pageAnimation}>
 						<motion.h2 variants={fade}>{movie.title}</motion.h2>
-						<motion.div className="line"></motion.div>
+						<motion.div variants={lineAnim} className="line"></motion.div>
 						<Link to={`/work/${movie.id}`}>
 							<Hide>
 								<motion.img variants={photoAnim} src={movie.mainImg} alt="athlete" />
@@ -37,7 +37,7 @@ const Movie = styled.div`
 	padding-bottom: 10rem;
 	.line {
 		height: 0.33rem;
-		background: #cccccc;
+		background: #23d997;
 		margin-bottom: 3rem;
 	}
 	img {

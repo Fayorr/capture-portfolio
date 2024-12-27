@@ -6,7 +6,7 @@ export const pageAnimation = {
         opacity: 1,
         y: 0, 
         transition: {
-            duration: 0.75,
+            duration: 1,
             when: "beforeChildren", //Until the parent loads finish others won't.
             staggerChildren: 0.25,  //to make each childrean wait for one another.
             
@@ -42,5 +42,10 @@ export const fade = {
 }
 export const photoAnim = {
     hidden: {opacity: 0, scale: 1.5},
-    show: {scale: 1, opacity: 1, transition: {duration: 1, ease: "easeOut"}}
+    show: {scale: 1, opacity: 1, transition: {duration: 0.75, ease: "easeOut"}}
+}
+export const lineAnim = {
+    hidden: {width: "0%"},
+    show: {width: "100%",
+    transition: {duration: 1}},
 }
