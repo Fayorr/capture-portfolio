@@ -47,7 +47,7 @@ export const photoAnim = {
 export const lineAnim = {
     hidden: {width: "0%"},
     show: {width: "100%",
-    transition: {duration: 0.1}},
+    transition: {duration: 1}},
 }
 export const slider = {
     hidden: {x: "-130%", skew: "45deg"},

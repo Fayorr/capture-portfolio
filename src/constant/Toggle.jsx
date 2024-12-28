@@ -1,11 +1,11 @@
 import { useState } from "react"
 import styled from "styled-components";
-import { motion, AnimateSharedLayout } from "motion/react";
+import { motion } from "motion/react";
 
 const Toggle = ({children, title}) => {
     const [toggle, setToggle] = useState(false);
   return (
-    <ToggleContainer layout onClick={() => setToggle(!toggle)}>
+    <ToggleContainer onClick={() => setToggle(!toggle)}>
         <motion.h4 layout>{title}</motion.h4>
         {toggle ? children : ""}
         <motion.div className="faq-line"></motion.div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components";
 import { Layout } from "../styles";
-import { motion, AnimateSharedLayout } from "motion/react";
+import { LayoutGroup, motion } from "motion/react";
 import Toggle from "../constant/Toggle";
 const FaqSection = () => {
     
@@ -12,40 +12,41 @@ const FaqSection = () => {
   return (
     <Faq>
         <h2>Any Questions <span>FAQ</span></h2>
-    <AnimateSharedLayout>
-        <Toggle title='How Do I Start'>
-            <Question> 
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
-            </div>
-            </Question>
-        </Toggle>
-        <Toggle title="Daily Schedule">
-            <Question>
+        <LayoutGroup>
+            <Toggle title='How Do I Start'>
+                <Question> 
                 <div className="answer">
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
                 </div>
-            </Question>
-        </Toggle>
-        <Toggle title="Different payment Methods">
-            <Question>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
-                </div>
-            </Question>
-        </Toggle>
-        <Toggle title="What products do you offer?">
-            <Question>  
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
-                </div>
-            </Question>
-        </Toggle>
-    </AnimateSharedLayout>
+                </Question>
+            </Toggle>
+            <Toggle title="Daily Schedule">
+                <Question>
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
+                    </div>
+                </Question>
+            </Toggle>
+            <Toggle title="Different payment Methods">
+                <Question>
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
+                    </div>
+                </Question>
+            </Toggle>
+            <Toggle title="What products do you offer?">
+                <Question>  
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
+                    </div>
+                </Question>
+            </Toggle>
+        </LayoutGroup>
+
     </Faq>
   );
 }
