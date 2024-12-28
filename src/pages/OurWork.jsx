@@ -3,18 +3,20 @@ import { Link } from 'react-router-dom';
 import { MovieState } from '../constant/movieState';
 import { motion } from "framer-motion"
 import { AnimatePresence } from "framer-motion"
-import { pageAnimation, fade, photoAnim, lineAnim, slider } from '../constant/animation';
+import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from '../constant/animation';
 
 const OurWork = () => {
 	return (
 		<Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+			<motion.div variants={sliderContainer}>
 				<Frame1 variants={slider}></Frame1>
 				<Frame2 variants={slider}></Frame2>
 				<Frame3 variants={slider}></Frame3>
 				<Frame4 variants={slider}></Frame4>
+			</motion.div>
 			<AnimatePresence>
 				{MovieState.map((movie, index) => (
-					<Movie key={index} variants={pageAnimation}>
+					<Movie key={index} >
 						<motion.h2 variants={fade}>{movie.title}</motion.h2>
 						<motion.div variants={lineAnim} className="line"></motion.div>
 						<Link to={`/work/${movie.id}`}>
@@ -33,6 +35,7 @@ const Work = styled(motion.div)`
 	min-height: 100vh;
 	overflow: hidden;
 	padding: 5rem 7rem;
+	background: white;
 	h2 {
 		padding: 1rem 0rem;
 	}

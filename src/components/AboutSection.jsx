@@ -27,7 +27,7 @@ const AboutSection = () => {
             </div> 
         </Description>
         <Image>
-            <motion.img variants={photoAnim} src={home1} alt="hero-image" />
+            <motion.img variants={photoAnim} initial='hidden' animate='show' src={home1} alt="hero-image" />
         </Image>
         <Wave />
    </Layout>
