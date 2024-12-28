@@ -6,7 +6,7 @@ import MovieDetail from './pages/MovieDetail';
 import GlobalStyle from './components/GlobalStyle';
 import Nav from './components/Nav';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence } from "motion/react"
 
 function App() {
 	const location = useLocation();

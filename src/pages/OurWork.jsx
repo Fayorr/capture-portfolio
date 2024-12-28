@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { MovieState } from '../constant/movieState';
-import { motion } from "framer-motion"
-import { AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "motion/react"
 import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from '../constant/animation';
 
 const OurWork = () => {

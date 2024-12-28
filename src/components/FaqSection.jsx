@@ -1,41 +1,51 @@
+import React, { useState } from "react"
 import styled from "styled-components";
 import { Layout } from "../styles";
+import { motion, AnimateSharedLayout } from "motion/react";
+import Toggle from "../constant/Toggle";
 const FaqSection = () => {
+    
+    const [toggle, setToggle] = useState(false);
+    const handleClick = () => {
+        setToggle(!toggle);
+    }
   return (
     <Faq>
         <h2>Any Questions <span>FAQ</span></h2>
-        <div className="question">
-            <h4>How Do I Start</h4>   
+    <AnimateSharedLayout>
+        <Toggle title='How Do I Start'>
+            <Question> 
             <div className="answer">
                 <p>Lorem ipsum dolor sit amet.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
             </div>
-            <div className="faq-line"></div>
-        </div>
-        <div className="question">
-            <h4>Daily Schedule</h4>   
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
-            </div>
-            <div className="faq-line"></div>
-        </div>
-        <div className="question">
-            <h4>Different payment Methods</h4>   
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
-            </div>
-        <div className="faq-line"></div>
-        </div>
-        <div className="question">
-            <h4>What products do you offer?</h4>    
-            <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
-            </div>
-            <div className="faq-line"></div>
-        </div>
+            </Question>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+            <Question>
+                <div className="answer">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
+                </div>
+            </Question>
+        </Toggle>
+        <Toggle title="Different payment Methods">
+            <Question>
+                <div className="answer">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
+                </div>
+            </Question>
+        </Toggle>
+        <Toggle title="What products do you offer?">
+            <Question>  
+                <div className="answer">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae?</p>
+                </div>
+            </Question>
+        </Toggle>
+    </AnimateSharedLayout>
     </Faq>
   );
 }
@@ -48,27 +58,12 @@ const FaqSection = () => {
         padding-bottom: 2rem;
         font-weight: 400;
     }
-    h4{
-        color: white;
-        font-size: 2rem;
-    }
-    .faq-line{
-        background: #cccccc;
-        height: 0.2rem;
-     
-        width: 100%;
-    }
-    .question{
-        padding: 1rem 0rem;
-        cursor: pointer;
-    }
-    .answer{
-        padding: 1rem 0rem;
-    p{
-        padding: 0.9rem 0;
-    }
+       
+    .hide{
+        display: none;
     }
  `;
-
-
+const Question = styled.div`
+    padding: 1rem 0rem;
+`;
 export default FaqSection;

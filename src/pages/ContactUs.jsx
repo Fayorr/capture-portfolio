@@ -1,6 +1,6 @@
 import React from 'react'
 import { pageAnimation } from '../constant/animation'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 const ContactUs = () => {
   return (

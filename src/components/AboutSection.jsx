@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Layout, Description, Image, Hide} from '../styles.jsx'
 import home1 from "../img/home1.png"
 import Wave from './Wave.jsx'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { titleAnim, fade, photoAnim } from "../constant/animation.js"
 
 
