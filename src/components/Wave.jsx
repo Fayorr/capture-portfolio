@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Wave = () => {
   return (
-      <WaveSvg width="1440" height="363" viewBox="0 0 1440 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <WaveSvg width="100%" height="363" viewBox="0 0 1440 363" fill="none" xmlns="http://www.w3.org/2000/svg">
         <motion.path 
           initial={{pathLength: 0, pathOffset: 1}}
           animate={{pathLength: 1, pathOffset: 0}}

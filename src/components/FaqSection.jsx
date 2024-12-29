@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components";
 import { Layout } from "../styles";
-import { LayoutGroup, motion } from "motion/react";
+import { LayoutGroup, motion, useAnimate, useInView } from "motion/react";
 import Toggle from "../constant/Toggle";
 const FaqSection = () => {
     
@@ -9,8 +9,24 @@ const FaqSection = () => {
     const handleClick = () => {
         setToggle(!toggle);
     }
+
+      const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { amount: 0.45, once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      // Animate all elements within scope with fade animation
+      animate(scope.current, 
+        { opacity: [0, 1] }, // Fade from 0 to 1 opacity
+        { 
+          duration: 1.5,     // Animation duration in seconds
+          ease: "easeOut"    // Easing function
+        }
+      );
+    }
+  }, [isInView]);
   return (
-    <Faq>
+    <Faq ref={scope}>
         <h2>Any Questions <span>FAQ</span></h2>
         <LayoutGroup>
             <Toggle title='How Do I Start'>
@@ -51,6 +67,7 @@ const FaqSection = () => {
 }
  const Faq = styled(Layout)`
     display: block; 
+
     span{
         display: block;
     }

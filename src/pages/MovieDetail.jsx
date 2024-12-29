@@ -13,11 +13,6 @@ const MovieDetail = () => {
 		setMovie(currentMovie);
 	}, [id]);
 
-	// Debug logging
-	// console.log('Route ID:', id);
-	// console.log('Movies:', MovieState);
-	// console.log('Found Movie:', movie);
-
 	if (!movie) {
 		return <div>Loading or No Movie Found</div>;
 	}
@@ -48,7 +43,6 @@ const MovieDetail = () => {
 const Details = styled.div`
 	color: white;
 `;
-
 const Headline = styled.div`
 	min-height: 90vh;
 	padding-top: 20vh;
