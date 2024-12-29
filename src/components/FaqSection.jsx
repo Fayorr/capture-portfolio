@@ -46,7 +46,6 @@ const FaqSection = () => {
                 </Question>
             </Toggle>
         </LayoutGroup>
-
     </Faq>
   );
 }
