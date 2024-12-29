@@ -11,7 +11,7 @@ import {motion, useInView, useAnimate} from "motion/react"
 
 const ServicesSection = () => {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { amount: 0.45, once: true });
+  const isInView = useInView(scope, { amount: 0.45 });
 
   useEffect(() => {
     if (isInView) {

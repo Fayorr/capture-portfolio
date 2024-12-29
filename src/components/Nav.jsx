@@ -25,6 +25,8 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
+position: sticky;
+top: 0;
 	min-height: 10vh;
 	display: flex;
 	margin: auto;
@@ -32,6 +34,7 @@ const StyledNav = styled.nav`
 	align-items: center;
 	padding: 1rem 7rem;
 	background-color: #282828;
+	z-index: 10;
 	ul {
 		display: flex;
 		list-style-type: none;

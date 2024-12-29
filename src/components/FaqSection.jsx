@@ -10,8 +10,8 @@ const FaqSection = () => {
         setToggle(!toggle);
     }
 
-      const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { amount: 0.45, once: true });
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { amount: 0.45 });
 
   useEffect(() => {
     if (isInView) {
@@ -19,7 +19,7 @@ const FaqSection = () => {
       animate(scope.current, 
         { opacity: [0, 1] }, // Fade from 0 to 1 opacity
         { 
-          duration: 1.5,     // Animation duration in seconds
+          duration: 2,     // Animation duration in seconds
           ease: "easeOut"    // Easing function
         }
       );
@@ -67,7 +67,7 @@ const FaqSection = () => {
 }
  const Faq = styled(Layout)`
     display: block; 
-
+    opacity: 0;
     span{
         display: block;
     }
