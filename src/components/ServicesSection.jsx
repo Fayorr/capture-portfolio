@@ -11,7 +11,7 @@ import {motion, useInView, useAnimate} from "motion/react"
 
 const ServicesSection = () => {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { amount: 0.45 });
+  const isInView = useInView(scope, { amount: 0.45, once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -70,6 +70,7 @@ const ServicesSection = () => {
 
 const Services = styled(Layout)`
   padding: 4rem 7rem;
+  /* background: red; */
   h2 {
     padding-bottom: 4.5rem;
   }
@@ -78,11 +79,19 @@ const Services = styled(Layout)`
     padding: 2rem 0rem 4rem;
   }
   opacity: 0; // Start with 0 opacity
+  @media (max-width: 768px) {
+    padding: 4rem 3.5rem;
+  }
 `;
 
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  /* background-color: red; */
+  width: 80%;
+  @media (max-width: 768px) {
+    
+  }
 `;
 
 const Card = styled.div`

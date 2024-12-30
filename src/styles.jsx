@@ -26,11 +26,19 @@ export const Image = styled.div`
     z-index: 2;
     flex: 1;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
     img{
-        width: 100%;
-        height: 80vh;
+      width: 100%;
+      height: 80vh;
         object-fit: cover;
-    }
+    } 
+    @media (max-width: 768px) {
+      width: 100%;
+      img{
+        height: 50vh;
+      }
+  }
 `;
 export const Hide = styled.div`
   overflow: hidden; 
