@@ -11,7 +11,7 @@ const FaqSection = () => {
     }
 
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { amount: 0.45 });
+  const isInView = useInView(scope, { amount: 0.45, once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -79,6 +79,9 @@ const FaqSection = () => {
     .hide{
         display: none;
     }
+    @media (max-width: 768px) {
+    padding: 5rem 3.5rem;
+  }
  `;
 const Question = styled.div`
     padding: 1rem 0rem;

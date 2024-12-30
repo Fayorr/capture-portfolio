@@ -9,13 +9,18 @@ export const Layout = styled(motion.div)`
     padding: 5rem 7rem;
     position: relative;
     color: white;
+    @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 export const Description = styled.div`
     flex: 1;
     padding-right: 5rem;
     font-weight: lighter;
     z-index: 2;
-    
+    @media (max-width: 768px) {
+      
+  }
 `;
 export const Image = styled.div`
     z-index: 2;
