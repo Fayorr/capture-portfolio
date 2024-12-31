@@ -70,7 +70,6 @@ const ServicesSection = () => {
 
 const Services = styled(Layout)`
   padding: 4rem 7rem;
-  /* background: red; */
   h2 {
     padding-bottom: 4.5rem;
   }
@@ -80,28 +79,35 @@ const Services = styled(Layout)`
   }
   opacity: 0; // Start with 0 opacity
   @media (max-width: 768px) {
-    padding: 4rem 3.5rem;
+    padding: 0;
+    img{ 
+      padding: 0;
+      width: 100%;
+    }
   }
 `;
 
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* background-color: red; */
   width: 80%;
   @media (max-width: 768px) {
-    
-  }
+    justify-content: center;
+   padding: 0;
+    margin: 0 auto;
+    width: 100%;
+      }
 `;
 
 const Card = styled.div`
    flex-basis: 14em;
+
    .icon {
     display: flex;
     align-items: center;
     width: 40%;
     img {
-      width: 30%;
+      width: 40%;
     }
    }
    h3 {
@@ -114,6 +120,15 @@ const Card = styled.div`
    p {
     padding: 2rem 0;
    }
+   @media (max-width: 768px) {
+   padding-left: 3rem;
+    flex-basis: 14em; 
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 40%;
+    }
+      }
 `;
 
 export default ServicesSection

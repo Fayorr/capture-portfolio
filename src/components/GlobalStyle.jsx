@@ -54,6 +54,24 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
         line-height: 150%;
     }
+    
+      @media (max-width: 768px) {
+  
+    }
+    .title{
+        padding: 5rem 3.5rem;
+        h2{
+            font-size: 3.4rem;
+        }
+        p{
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        button{
+            font-size: 1rem;
+        }
+    } 
+     
 `;
 
 export default GlobalStyle;

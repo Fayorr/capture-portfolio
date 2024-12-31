@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
    <Layout>
         <Description>
-            <div className="title">
+            <div className="title">  
                 <Hide>
                     <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                 </Hide>
