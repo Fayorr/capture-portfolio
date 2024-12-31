@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const Nav = () => {
-	const [toggle, setToggle] = useState(true);
+	const [toggle, setToggle] = useState(false);
 
 const handleClick = () => {
 	setToggle(!toggle)
@@ -30,7 +30,7 @@ const handleClick = () => {
 					<NavLink to="/contact">Contact Us</NavLink>
 				</li>
 			</ul>
-			<div onClick={handleClick}><i className="fa-solid fa-bars" 
+			<div className='bars-container' onClick={handleClick}><i className="fa-solid fa-bars" 
 			></i></div>
 		</StyledNav>
 	);
@@ -45,12 +45,17 @@ const StyledNav = styled.nav`
 	margin: auto;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 3.5rem;
+	padding: 1rem 7rem;
 	background-color: #282828;
 	z-index: 10;
+	@media (max-width: 768px) {
+		padding: 1rem 3.5rem;
+	}
 	ul {
+		flex-direction: row;
 		display: flex;
 		list-style-type: none;
+		
 	}
 	li {
 		padding-left: 5rem;
@@ -68,7 +73,10 @@ const StyledNav = styled.nav`
 	.cancel--button{
 		display: none;
 	}
-	.fa-bars{
+	.bars-container{
+		display: none;
+	}
+	 .fa-bars{
 			display: none;
 		}    
 	  @media (max-width: 768px) {
@@ -104,6 +112,9 @@ const StyledNav = styled.nav`
 			padding: 10% 0 1rem 10%;
 			/* padding-left: 10%; */
 		}
+		.bars-container{
+		display: block;
+	}
 		.fa-bars{
             display: block;
 			color: white;
