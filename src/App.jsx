@@ -16,7 +16,7 @@ function App() {
     <>
       <GlobalStyle />
       <Nav />
-      <ScrollTop /> {/* Add ScrollTop here */}
+      <ScrollTop /> 
       
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
