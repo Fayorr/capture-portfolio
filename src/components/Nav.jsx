@@ -13,7 +13,9 @@ const handleClick = () => {
 const location = useLocation();
 
 useEffect(() => {
-	setToggle(!toggle);
+	if (toggle){
+		setToggle(!toggle);
+	} 
 }, [location]);
 
 	return (
