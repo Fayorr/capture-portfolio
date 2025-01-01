@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
 	const [toggle, setToggle] = useState(false);
@@ -10,6 +10,11 @@ const handleClick = () => {
 	setToggle(!toggle)
 	console.log("clicked")
 }
+const location = useLocation();
+
+useEffect(() => {
+	setToggle(!toggle);
+}, [location]);
 
 	return (
 		<StyledNav>
