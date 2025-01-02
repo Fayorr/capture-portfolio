@@ -7,7 +7,7 @@ import GlobalStyle from './components/GlobalStyle';
 import Nav from './components/Nav';
 import ScrollTop from './constant/ScrollTop';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from "framer-motion"; // Changed from motion/react to framer-motion
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
@@ -24,7 +24,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/work">
             <Route index element={<OurWork />} />
-            <Route path=":id" element={<MovieDetail />} /> {/* Simplified path */}
+            <Route path=":id" element={<MovieDetail />} /> 
           </Route>
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<AboutUs />} />
@@ -33,5 +33,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
