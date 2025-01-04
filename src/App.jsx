@@ -11,20 +11,20 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
-  
+
   return (
     <>
       <GlobalStyle />
       <Nav />
-      <ScrollTop /> 
-      
+      <ScrollTop />
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUs />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/work">
             <Route index element={<OurWork />} />
-            <Route path=":id" element={<MovieDetail />} /> 
+            <Route path=":id" element={<MovieDetail />} />
           </Route>
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<AboutUs />} />
@@ -33,5 +33,4 @@ function App() {
     </>
   );
 }
-
 export default App;
