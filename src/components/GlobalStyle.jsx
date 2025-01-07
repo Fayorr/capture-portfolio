@@ -71,7 +71,9 @@ const GlobalStyle = createGlobalStyle`
             font-size: 1rem;
         }
     } 
-     
+    
+    
+    
 `;
 
 export default GlobalStyle;
