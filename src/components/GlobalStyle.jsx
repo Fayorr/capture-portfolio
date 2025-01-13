@@ -1,10 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
 
+
+
+
 const GlobalStyle = createGlobalStyle`
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        user-select: none;
+-webkit-user-select: none;  /* Chrome, Opera */
+-webkit-touch-callout: none;   /* Safari */
+-moz-user-select: none;   /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
     }
     html{
         @media (max-width: 1500px){
