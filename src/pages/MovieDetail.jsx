@@ -75,6 +75,16 @@ const SecondaryImage = styled.div`
 		height: 100vh;
 		/* object-position: center; */
 		object-fit: cover;
+		@media (max-width: 768px) {
+		
+		  object-fit: contain;
+		  object-position: top;
+		  background-color: red;
+		  width: 100%;
+		  height: inherit;
+		  margin: 0;
+		  padding: 0;
+	  }
 			}
 `;
 
